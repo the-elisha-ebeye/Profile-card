@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Profile Card</title>
+    </head>
+    <body>
+        <main>
+            <article data-testid="test-profile-card" aria-labelledby="profile-name" role="region">
+            <div class="profile-left">
+            <figure class="avatar" aria-hidden="false" title="User avatar">
+                <img data-testid="test-user-avatar" src="/img/imagefromfb.jpg" alt="User avatar"  />
+            </figure>
+            </div>
+
+            <div class="profile-right">
+            <header class="card-header">
+                <div class="name-and-role">
+                <h2 id="profile-name" data-testid="test-user-name" tabindex="0">Elisha Ebeye</h2>
+                <p class="role" aria-label="role">Frontend Designer</p>
+                </div>
+
+                <div class="time-block" aria-live="polite">
+                <div style="font-size:0.8rem;color:var(--muted)">Current time (ms)</div>
+                <time id="now-ms" data-testid="test-user-time" datetime="" aria-atomic="true">...</time>
+                </div>
+            </header>
+
+            <section aria-labelledby="bio-heading">
+                <h3 id="bio-heading" class="sr-only">Biography</h3>
+                <p id="bio-paragraph" data-testid="test-user-bio" class="bio-collapsed" tabindex="0">
+                Welcome! I am one of the best upcoming frontend designers around. i build great designs, *(the rest is AI generated, I'm on the clock here. didn't know tasks have started) accessible interfaces and build prototypes that help teams ship products faster.
+                I enjoy translating complex problems into clear user experiences, and I believe in design systems, rapid iteration,
+                and collaborating closely with engineers to make delightful, reliable products.
+                </p>
+                <button id="bio-toggle" class="bio-toggle" aria-expanded="false" aria-controls="bio-paragraph">Show more</button>
+            </section>
+
+            <nav aria-label="Social links" data-testid="test-user-social-links">
+                <ul class="socials" role="list">
+                <li><a href="https://twitter.com/0x_Prof/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+                <li><a href="https://github.com/the-elisha-ebeye/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+                </ul>
+            </nav>
+
+            <div class="lists">
+                <section class="list" aria-labelledby="hobbies-heading">
+                <h3 id="hobbies-heading">Hobbies</h3>
+                <ul data-testid="test-user-hobbies" class="inline-list" role="list">
+                    <li>Playing drums</li>
+                    <li>Piano &amp; bass practice</li>
+                    <li>Reading</li>
+                </ul>
+                </section>
+
+                <section class="list" aria-labelledby="dislikes-heading">
+                <h3 id="dislikes-heading">Dislikes</h3>
+                <ul data-testid="test-user-dislikes" class="inline-list" role="list">
+                    <li>Stupidity</li>
+                </ul>
+                </section>
+            </div>
+            </div>
+            </article>
+        </main>
+    
+        <script src="script.js"></script>
+    </body>
+</html>
