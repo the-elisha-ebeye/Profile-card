@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <ul>
+      <li><a href="index.html">Profile Card</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-card" data-testid="test-contact-page">
+    <header>
+      <h1>Contact Me</h1>
+    </header>
+
+    <form id="contactForm" data-testid="test-contact-form" novalidate>
+      <!-- Full Name -->
+      <label for="name">Full Name:</label>
+      <input id="name" name="name" type="text" data-testid="test-contact-name" aria-describedby="error-name" required />
+      <span id="error-name" class="error" data-testid="test-contact-error-name" aria-live="polite"></span>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" data-testid="test-contact-email" aria-describedby="error-email" required />
+      <span id="error-email" class="error" data-testid="test-contact-error-email" aria-live="polite"></span>
+
+      <!-- Subject -->
+      <label for="subject">Subject:</label>
+      <input id="subject" name="subject" type="text" data-testid="test-contact-subject" aria-describedby="error-subject" required />
+      <span id="error-subject" class="error" data-testid="test-contact-error-subject" aria-live="polite"></span>
+
+      <!-- Message -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" data-testid="test-contact-message" aria-describedby="error-message" required></textarea>
+      <span id="error-message" class="error" data-testid="test-contact-error-message" aria-live="polite"></span>
+
+      <button type="submit" data-testid="test-contact-submit">Send</button>
+    </form>
+
+    <p id="successMsg" class="success" data-testid="test-contact-success" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
